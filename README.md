@@ -53,6 +53,8 @@ To get started with `pyparrot`, you should first try to run `demo.py` program fi
 
 Also, when starting your program in Python3 using `pyparrot`, please remember to specify the correct Bebop type. If you are using smaller (blue or red) Bebop drones (these are Bebop 1s), then you have to specify that when creating a Bebop object as `bebop = Bebop(drone_type="Bebop")` since the default Bebop type is Bebop 2 (white Bebop drones). Also, if you are using hull protectors in Bebop 1 you should use the `set_hull_protection` method, where the hull protector parameters is set to 1 for a hull protection being in place on Bebop 1\. You are free to use and extend any of the programs in the `examples/` directory of the `pyparrot` repository.
 
+Also, if you have trouble connecting the drone to wifi, you may need to revert to an earlier `zeroconf` version, for example by running `pip3 install zeroconf==0.20.0`.
+
 You can use `move_relative` method to fly the drone a relative number of meters as specified in [`bebop` commands doc](https://pyparrot.readthedocs.io/en/latest/bebopcommands.html). If you would like to estimate the distance and use `fly_direct` method, you can use the distance formula.
 
 ### 2\. 3D Printed Parts
