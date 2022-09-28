@@ -3,11 +3,10 @@
 ## Timeline
 
 Activity                   | Deadline
--------------------------- | --------------------------------
-Races:                     | September 15th, 2022 at 3pm
-Part 2 Idea Due:           | September 15th, 2022 by midnight
-Project Walkthrough:       | September 22nd, 2022 during lab
-Demo and Final Submission: | September 29th, 2022 by 2:30pm   |
+-------------------------- | ------------------------------
+`pyparrot` set up and demo | September 29th, 2022 at 4:20pm
+Project Walkthrough:       | October 6th, 2022 during lab
+Demo and Final Submission: | October 13th, 2022 by 2:30pm
 
 ## Class Community Guidelines
 
@@ -30,7 +29,7 @@ Drones can be dangerous and cause injury! Additionally, Bebop drones are notorio
 
 ## Introduction
 
-This project assignment invites you to work in a team to implement a behavior-based navigation technique for an autonomous aerial vehicle for an application of choice. First, you will familiarize yourselves with the new robotic platform, Parrot BEBOP, and will complete the necessary installations and set up using `pyparrot` Python Interface for Parrot drones. Then, you will learn how to use `pyparrot` interface to program autonomous flying of the robot. Finally, teams will implement a navigation technique for a specific application and will reflect on the ethical considerations of the developed navigation strategy. Teams are also responsible for writing a detailed report, stored in the file `writing/report.md`. This is a Markdown file that must adhere to the standards described in the [Markdown Syntax Guide](https://guides.github.com/features/mastering-markdown/).
+This project assignment invites you to work in a team to implement a behavior-based navigation technique for an autonomous aerial vehicle for an application of your choice. First, you will familiarize yourselves with the new robotic platform, Parrot BEBOP, and will complete the necessary installations and set up using `pyparrot` Python Interface for Parrot drones. Then, you will learn how to use `pyparrot` interface to program autonomous flying of the robot. Finally, teams will implement a navigation technique for a specific application and will reflect on the ethical considerations of the developed navigation strategy. Teams are also responsible for writing a detailed report, stored in the file `writing/report.md`. This is a Markdown file that must adhere to the standards described in the [Markdown Syntax Guide](https://guides.github.com/features/mastering-markdown/).
 
 ## Learning
 
@@ -40,13 +39,21 @@ To learn about `pyparrot` interface please read the [`pyparrot` documentation](h
 
 ### 1\. Set Up
 
-- If you have not already installed `pyparrot` and its dependent software, please complete the needed installations following the instructions in the [pyparrot Installation Guide](https://pyparrot.readthedocs.io/en/latest/installation.html)
+- Review the [Tutorial 1 (Set Up)](https://www.parrot.com/us/support/products/parrot-bebop-2/preparing-your-drone). Download the app called "FreeFlight Pro", upgrade the firmware if needed and perform the calibrations (roll, pitch, yaw). Now, without flying it, ensure that you are able to connect your drone (wifi works) and that you can see the camera's input on the app.
+
+- In this project, you will not operate the drone via the "FreeFlight Pro app. Instead, you will program it using `pyparrot` interface, which will allow you to write code in Python to have the drone move automatically. If you have not already installed `pyparrot` and its dependent software, please complete the needed installations following the instructions in the [pyparrot Installation Guide](https://pyparrot.readthedocs.io/en/latest/installation.html)
 
 Please note that you may need to use pip3 to complete installations that are compatible with Python3\. Be sure to install `pyparrot` from `pip` using `pip3 install pyparrot` command so that you do not need to clone the `pyparrot` repository and store it in your lab repository. In order to connect to the camera you should install `ffmpeg` (on the Mac, you can use `brew install ffmpeg` command) and `opencv`. If you find the need to utilize the `demoBebopVisionGUI.py` example of `pyparrot`, you will also need to install [VLC](https://www.videolan.org/vlc/index.html) and `PyQt5` (on the Mac, you can use `brew install pyqt5` command).
 
-- Review the [Tutorial 1 (Set Up)](https://www.parrot.com/us/support/products/parrot-bebop-2/preparing-your-drone). Download the app called ``FreeFlight Pro'', upgrade the firmware if needed and perform the calibrations (roll, pitch, yaw). Now, without flying it, ensure that you are able to connect your drone (wifi works) and that you can see the camera's input on the app.
-
 Also, please remember that you can't control your drone from the Allegheny's wifi. You MUST be connected to YOUR drone's wifi.
+
+### `pyparrot` Notes
+
+To get started with `pyparrot`, you should first try to run `demo.py` program first, uncommenting each movement one by one.
+
+Also, when starting your program in Python3 using `pyparrot`, please remember to specify the correct Bebop type. If you are using smaller (blue or red) Bebop drones (these are Bebop 1s), then you have to specify that when creating a Bebop object as `bebop = Bebop(drone_type="Bebop")` since the default Bebop type is Bebop 2 (white Bebop drones). Also, if you are using hull protectors in Bebop 1 you should use the `set_hull_protection` method, where the hull protector parameters is set to 1 for a hull protection being in place on Bebop 1\. You are free to use and extend any of the programs in the `examples/` directory of the `pyparrot` repository.
+
+You can use `move_relative` method to fly the drone a relative number of meters as specified in [`bebop` commands doc](https://pyparrot.readthedocs.io/en/latest/bebopcommands.html). If you would like to estimate the distance and use `fly_direct` method, you can use the distance formula.
 
 ### 2\. 3D Printed Parts
 
@@ -66,15 +73,19 @@ The implementation task for this project is to develop a behavior-based navigati
 - Your drone should take at least five photos during each leg of the flight (from take off to landing) and record the video of its flight in its entirety.
 - The program should collect the sensor data each time a sensor is updated and output it into a file.
 
-### `pyparrot` Notes
+## Project Walkthrough
 
-When starting your program in Python3 using `pyparrot`, please remember to specify the correct Bebop type. If you are using smaller (blue or red) Bebop drones (these are Bebop 1s), then you have to specify that when creating a Bebop object as `bebop = Bebop(drone_type="Bebop")` since the default Bebop type is Bebop 2 (white Bebop drones). Also, if you are using hull protectors in Bebop 1 you should use the `set_hull_protection` method, where the hull protector parameters is set to 1 for a hull protection being in place on Bebop 1\. You are free to use and extend any of the programs in the `examples/` directory of the `pyparrot` repository.
+During the lab session on Thursday, October 6th, each team will participate in the project walk-through process. Project walkthrough is an informal process where the instructor facilitates the process of reviewing the progress of the project and the written code. The purpose of this walkthrough is to motivate continuous progression on the project, identification of any conceptual issues, and detection of any technical errors. When the walkthrough is finished, the authors of the project are responsible for taking the necessary actions to correct the identified issues, if there are any.
 
-You can use `move_relative` method to fly the drone a relative number of meters as specified in [`bebop` commands doc](https://pyparrot.readthedocs.io/en/latest/bebopcommands.html). If you would like to estimate the distance and use `fly_direct` method, you can use the distance formula.
+By this project walkthrough, each team should have identified the navigation task they want their robot to complete, and have written and tested some code to accomplish this task. During the walkthrough, the team members will collaboratively lead the walkthrough process, which should last 5-10 minutes for each team. Each team should:
+
+- Describe the chosen navigation task.
+- Explain and demonstrate the written code.
+- Identify the steps left to complete for this project.
 
 ## Project Demonstration
 
-At the beginning of the lab session on Wednesday, September 29th, each team will be given an opportunity to demonstrate their project. When the lab session starts, teams will be given a few minutes to set up their demonstrations and get them running. Then, class members will participate in an interactive demonstration session, where everyone will be able to view each demonstration.
+At the beginning of the lab session on Thursday, October 13th, each team will be given an opportunity to demonstrate their project. When the lab session starts, teams will be given a few minutes to set up their demonstrations and get them running. Then, class members will participate in an interactive demonstration session, where everyone will be able to view each demonstration.
 
 ## Assignment Assessment
 
@@ -88,7 +99,7 @@ The grade that a student receives on this assignment will have the following com
 
 - **Mastery of Technical Knowledge and Skills [up to 50%]**: Students will receive a portion of their assignment grade when their project implementation reveals that they have mastered all of the technical knowledge and skills developed during the completion of this project. All programs must be inside `src/` directory. As a part of this grade, the instructor will assess aspects of the project including, but not limited to, the correctness of the program, the completeness and correctness of the software and hardware integration, the use of effective source code comments and Git commit messages.
 
-All grades for this project will be reported through a student's gradebook GitHub repository (to be set up soon).
+All grades for this project will be reported through a student's gradebook GitHub repository.
 
 ## GatorGrade
 
