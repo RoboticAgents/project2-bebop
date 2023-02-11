@@ -1,28 +1,18 @@
-# Project 02: Building Ethical and Aggressive Robots
+# Project 2: Building Ethical and Aggressive Robots
 
-## Timeline
+## Hardware Requirements
 
-Activity                   | Deadline
--------------------------- | ------------------------------
-`pyparrot` set up and demo | September 29th, 2022 at 4:20pm
-Project Walkthrough:       | October 6th, 2022 during lab
-Demo and Final Submission: | October 13th, 2022 by 2:30pm
-
-## Class Community Guidelines
-
-Throughout the completion of this project you must adhere to the [community guidelines](https://github.com/CMPSC-311-Allegheny-College-Fall-2022/course-information/blob/main/community_guidelines.md) that we developed as a class. To report any violations of the code of conduct, please submit an [anonymous form](https://forms.gle/tePfnLY12hyN1Xbd6). Students who think that the class should revise some aspect of the guidelines must use the GitHub issue tracker for that repository to suggest, discuss, and implement any required changes.
-
-By working on and completing this assignment you agree to use the hardware given to you in a responsible manner. Each team is responsible for the safety and security of the robot while it is in your possession. You are allowed to take the robots used in this project outside of ALIC but you have to return all parts at the completion of this project, or if requested, at the end of the semester.
+This project uses Bebop 2 drones and a Python interface to program the drones.
 
 ### Drone Safety
 
 Drones can be dangerous and cause injury! Additionally, Bebop drones are notoriously hard to catch. You must obey the following safety rules:
 
-- No flying inside the buildings unless it is in the Wise Center.
+- No flying inside the buildings unless it is in the gym.
 - No flying over or near anyone.
-- Must fly in the flying zone (Wise Center's blue courts or public property outside).
+- Must fly in the flying zone.
 - Use hull protection for Bebop 1 or 3D print propeller guards for Bebop 2 (the 3D printing files are provided in the lab repository).
-- Use safety glasses (available in ALIC) if you are operating in the close proximity of the flying drone, especially if flying it without hull or propeller protection.
+- Use safety glasses if you are operating in the close proximity of the flying drone, especially if flying it without hull or propeller protection.
 - If you are not wearing glasses, do NOT put your eyes near the propellers.
 - If you decide to test your drone outside, make sure to do so outside of campus, remember flying drones on Allegheny campus is not allowed! Also, be sure to obey the [FAA flying restrictions](https://www.faa.gov/uas/recreational_fliers/where_can_i_fly/).
 - Do NOT connect to drone's wifi of another team -- this is dangerous.
@@ -77,7 +67,7 @@ The implementation task for this project is to develop a behavior-based navigati
 
 ## Project Walkthrough
 
-During the lab session on Thursday, October 6th, each team will participate in the project walk-through process. Project walkthrough is an informal process where the instructor facilitates the process of reviewing the progress of the project and the written code. The purpose of this walkthrough is to motivate continuous progression on the project, identification of any conceptual issues, and detection of any technical errors. When the walkthrough is finished, the authors of the project are responsible for taking the necessary actions to correct the identified issues, if there are any.
+In middle of the project timeline, each team will participate in the project walk-through process. Project walkthrough is an informal process where the instructor facilitates the process of reviewing the progress of the project and the written code. The purpose of this walkthrough is to motivate continuous progression on the project, identification of any conceptual issues, and detection of any technical errors. When the walkthrough is finished, the authors of the project are responsible for taking the necessary actions to correct the identified issues, if there are any.
 
 By this project walkthrough, each team should have identified the navigation task they want their robot to complete, and have written and tested some code to accomplish this task. During the walkthrough, the team members will collaboratively lead the walkthrough process, which should last 5-10 minutes for each team. Each team should:
 
@@ -87,7 +77,7 @@ By this project walkthrough, each team should have identified the navigation tas
 
 ## Project Demonstration
 
-At the beginning of the lab session on Thursday, October 13th, each team will be given an opportunity to demonstrate their project. When the lab session starts, teams will be given a few minutes to set up their demonstrations and get them running. Then, class members will participate in an interactive demonstration session, where everyone will be able to view each demonstration.
+At the project due date, each team will be given an opportunity to demonstrate their project. When the lab session starts, teams will be given a few minutes to set up their demonstrations and get them running. Then, class members will participate in an interactive demonstration session, where everyone will be able to view each demonstration.
 
 ## Assignment Assessment
 
