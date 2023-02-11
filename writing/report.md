@@ -1,7 +1,5 @@
 # Report by Add Team Member Names
 
-## Participation in Races
-
 ## Navigation Task
 
 TODO: Describe the navigation task and specific example application you have chosen and provide a motivation for it. Include references (links are okay) to all resources you have used throughout your project.
