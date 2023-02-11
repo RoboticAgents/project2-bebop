@@ -1,4 +1,4 @@
-# Project 2: Building Ethical and Aggressive Robots
+# Project 2: Navigation in the Air
 
 ## Hardware Requirements
 
